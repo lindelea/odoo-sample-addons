@@ -11,6 +11,8 @@
     'depends': ['base', 'purchase'],
     'data': [
         'views/res_partner_views.xml',
+        'views/res_company_views.xml',
+        'views/report_invoice.xml',
     ],
     'installable': True,
     'application': False,

@@ -1,0 +1,17 @@
+<odoo>
+    <template id="report_invoice_document_inherited" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[hasclass('page')]" position="inside">
+            <!-- Add a new row for the invoice_jp_no field -->
+            <div class="row mt32 mb32">
+                <div class="col-12">
+                    <!-- Add a label for the invoice_jp_no field -->
+                    <t t-set="invoice_jp_no" t-value="o.company_id.invoice_jp_no"/>
+                    <div>
+                        <strong>適格請求書登録番号:</strong>
+                        <span t-esc="invoice_jp_no"/>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
